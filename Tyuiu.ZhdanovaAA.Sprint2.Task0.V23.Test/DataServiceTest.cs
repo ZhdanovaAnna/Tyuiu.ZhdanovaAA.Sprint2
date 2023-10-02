@@ -19,4 +19,4 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task0.V23.Test
             CollectionAssert.AreEqual(wait, res);
         }
     }
-}
+} 

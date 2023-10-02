@@ -49,4 +49,4 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task0.V23
             Console.ReadKey();
         }
     }
-}
+} 
