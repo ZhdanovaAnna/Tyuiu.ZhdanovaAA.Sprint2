@@ -32,8 +32,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task6.V11.Lib
                     {
                         day = 1;
                         m += 1;
-                    }
-                    return day.ToString() + " " + month[m-1] + " " + year.ToString() + " года";
+                    } return day.ToString() + " " + month[m-1] + " " + year.ToString() + " года";
                 case 4:
                 case 6:
                 case 9:
