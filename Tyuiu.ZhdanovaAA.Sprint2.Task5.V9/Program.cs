@@ -38,8 +38,6 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9
             Console.WriteLine("Введите число: ");
             int n = Convert.ToInt32(Console.ReadLine());
 
-            string month = "";
-
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ                                                               *");
             Console.WriteLine("***************************************************************************");
@@ -51,76 +49,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9
 
             else
             {
-                int day = ds.FindDateOfNextDay(m, n);
-                if (day == 1)
-                {
-                    m++;
-                }
-
-                switch (m)
-                {
-                    case 1:
-                        {
-                            month = "Января";
-                        }
-                        break;
-                    case 2:
-                        {
-                            month = "Февраля";
-                        }
-                        break;
-                    case 3:
-                        {
-                            month = "Марта";
-                        }
-                        break;
-                    case 4:
-                        {
-                            month = "Апреля";
-                        }
-                        break;
-                    case 5:
-                        {
-                            month = "Мая";
-                        }
-                        break;
-                    case 6:
-                        {
-                            month = "Июня";
-                        }
-                        break;
-                    case 7:
-                        {
-                            month = "Июля";
-                        }
-                        break;
-                    case 8:
-                        {
-                            month = "Августа";
-                        }
-                        break;
-                    case 9:
-                        {
-                            month = "Сентября";
-                        }
-                        break;
-                    case 10:
-                        {
-                            month = "Октября";
-                        }
-                        break;
-                    case 11:
-                        {
-                            month = "Ноября";
-                        }
-                        break;
-                    case 12:
-                        {
-                            month = "Декабря";
-                        }
-                        break;
-                }
-                Console.WriteLine($"Дата следующего дня: {day.ToString() + " " + month}");
+                Console.WriteLine($"Дата следующего дня: {ds.FindDateOfNextDay(m, n)}");
             }
             Console.ReadKey();
         }

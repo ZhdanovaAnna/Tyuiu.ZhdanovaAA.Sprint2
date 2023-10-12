@@ -10,9 +10,10 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
 {
     public class DataService : ISprint2Task5V9
     {
-        public int FindDateOfNextDay(int m, int n)
+        public string FindDateOfNextDay(int m, int n)
         {
             int day;
+            string month = "";
             switch (m)
             {
                 case 1:
@@ -68,7 +69,75 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                         throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {m}\n День должен быть от 1 до 31. Значение {n}");
                     }
             }
-            return day;
+
+            switch (m)
+            {
+                case 1:
+                    {
+                        month = "Января";
+                    }
+                    break;
+                case 2:
+                    {
+                        month = "Февраля";
+                    }
+                    break;
+                case 3:
+                    {
+                        month = "Марта";
+                    }
+                    break;
+                case 4:
+                    {
+                        month = "Апреля";
+                    }
+                    break;
+                case 5:
+                    {
+                        month = "Мая";
+                    }
+                    break;
+                case 6:
+                    {
+                        month = "Июня";
+                    }
+                    break;
+                case 7:
+                    {
+                        month = "Июля";
+                    }
+                    break;
+                case 8:
+                    {
+                        month = "Августа";
+                    }
+                    break;
+                case 9:
+                    {
+                        month = "Сентября";
+                    }
+                    break;
+                case 10:
+                    {
+                        month = "Октября";
+                    }
+                    break;
+                case 11:
+                    {
+                        month = "Ноября";
+                    }
+                    break;
+                case 12:
+                    {
+                        month = "Декабря";
+                    }
+                    break;
+            }
+            if (day == 1)
+            {
+                m++;
+            }
+            return day.ToString() + " " + month;
         }
     }
 }
