@@ -29,7 +29,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                             day = n + 1;
                             if (day < 10)
                             {
-                                days = "0" + day;
+                                days = "0" + day.ToString();
                             }
                             else
                             {
@@ -53,7 +53,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                             day = n + 1;
                             if (day < 10)
                             {
-                                days = "0" + day;
+                                days = "0" + day.ToString();
                             }
                             else
                             {
@@ -74,7 +74,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                             day = n + 1;
                             if (day < 10)
                             {
-                                days = "0" + day;
+                                days = "0" + day.ToString();
                             }
                             else
                             {
