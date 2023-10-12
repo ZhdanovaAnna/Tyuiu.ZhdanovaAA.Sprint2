@@ -12,7 +12,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task6.V11.Test
         public void ValidFindDateOfNextDay()
         {
             DataService ds = new DataService();
-            Assert.AreEqual("24 Марта 2022 года", ds.FindDateOfNextDay(2022, 3, 23));
+            Assert.AreEqual("24.03.2022", ds.FindDateOfNextDay(2022, 3, 23));
 
             Assert.ThrowsException<ArgumentException>(() =>
             {

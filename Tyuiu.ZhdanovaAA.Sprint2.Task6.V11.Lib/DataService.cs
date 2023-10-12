@@ -13,7 +13,8 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task6.V11.Lib
         public string FindDateOfNextDay(int g, int m, int n)
         {
             int year = g, day = 0;
-            string[] month = new string[12] { "Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля",  "Августа", "Сентября", "Октября", "Ноября", "Декабря" };
+            string days = "";
+            string[] month = new string[12] { "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12" };
 
 
             switch (m)
@@ -27,12 +28,20 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task6.V11.Lib
                     if ((n < 31) && (n > 0))
                     {
                         day = n + 1;
+                        if (day < 10)
+                        {
+                            days = "0" + day.ToString();
+                        }
+                        else
+                        {
+                            days = day.ToString();
+                        }
                     }
                     else
                     {
-                        day = 1;
+                        days = "01";
                         m += 1;
-                    } return day.ToString() + " " + month[m-1] + " " + year.ToString() + " года";
+                    } return days + "." + month[m-1] + "." + year.ToString();
                 case 4:
                 case 6:
                 case 9:
@@ -40,33 +49,57 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task6.V11.Lib
                     if ((n < 30) && (n > 0))
                     {
                         day = n + 1;
+                        if (day < 10)
+                        {
+                            days = "0" + day.ToString();
+                        }
+                        else
+                        {
+                            days = day.ToString();
+                        }
                     }
                     else
                     {
-                        day = 1;
+                        days = "01";
                         m += 1;
-                    } return day.ToString() + " " + month[m-1] + " " + year.ToString() + " года"; ;
+                    } return days + "." + month[m - 1] + "." + year.ToString();
                 case 2:
                     if ((n < 28) && (n > 0))
                     {
                         day = n + 1;
+                        if (day < 10)
+                        {
+                            days = "0" + day.ToString();
+                        }
+                        else
+                        {
+                            days = day.ToString();
+                        }
                     }
                     else
                     {
-                        day = 1;
+                        days = "01";
                         m += 1;
-                    } return day.ToString() + " " + month[m-1] + " " + year.ToString() + " года"; ;
+                    } return days + "." + month[m - 1] + "." + year.ToString();
                 case 12:
                     if ((n < 31) && (n > 0))
                     {
                         day = n + 1;
+                        if (day < 10)
+                        {
+                            days = "0" + day.ToString();
+                        }
+                        else
+                        {
+                            days = day.ToString();
+                        }
                     }
                     else
                     {
-                        day = 1;
+                        days = "01";
                         m = 1;
                         year = g + 1;
-                    } return day.ToString() + " " + month[m-1] + " " + year.ToString() + " года";
+                    } return days + "." + month[m - 1] + "." + year.ToString();
                 default: throw new ArgumentException($"Месяц должен быть от 1 до 12. Значение {m}\n День должен быть от 1 до 31. Значение {n}");
             }
         }
