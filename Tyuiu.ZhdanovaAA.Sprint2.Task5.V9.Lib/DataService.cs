@@ -12,8 +12,8 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
     {
         public string FindDateOfNextDay(int m, int n)
         {
-            int day;
-            string month = "";
+            int day = 0;
+            string days = "", month = "";
             switch (m)
             {
                 case 1:
@@ -27,10 +27,18 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                         if ((n < 31) && (n > 0))
                         {
                             day = n + 1;
+                            if (day < 10)
+                            {
+                                days = "0" + day;
+                            }
+                            else
+                            {
+                                days = day.ToString();
+                            }
                         }
                         else
                         {
-                            day = 1;
+                            days = "01";
                             m += 1;
                         }
                     }
@@ -43,10 +51,18 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                         if ((n < 30) && (n > 0))
                         {
                             day = n + 1;
+                            if (day < 10)
+                            {
+                                days = "0" + day;
+                            }
+                            else
+                            {
+                                days = day.ToString();
+                            }
                         }
                         else
                         {
-                            day = 1;
+                            days = "01";
                             m += 1;
                         }
                     }
@@ -56,10 +72,18 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
                         if ((n < 28) && (n > 0))
                         {
                             day = n + 1;
+                            if (day < 10)
+                            {
+                                days = "0" + day;
+                            }
+                            else
+                            {
+                                days = day.ToString();
+                            }
                         }
                         else
                         {
-                            day = 1;
+                            days = "01";
                             m += 1;
                         }
                     }
@@ -74,62 +98,62 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
             {
                 case 1:
                     {
-                        month = "Января";
+                        month = "01";
                     }
                     break;
                 case 2:
                     {
-                        month = "Февраля";
+                        month = "02";
                     }
                     break;
                 case 3:
                     {
-                        month = "Марта";
+                        month = "03";
                     }
                     break;
                 case 4:
                     {
-                        month = "Апреля";
+                        month = "04";
                     }
                     break;
                 case 5:
                     {
-                        month = "Мая";
+                        month = "05";
                     }
                     break;
                 case 6:
                     {
-                        month = "Июня";
+                        month = "06";
                     }
                     break;
                 case 7:
                     {
-                        month = "Июля";
+                        month = "07";
                     }
                     break;
                 case 8:
                     {
-                        month = "Августа";
+                        month = "08";
                     }
                     break;
                 case 9:
                     {
-                        month = "Сентября";
+                        month = "09";
                     }
                     break;
                 case 10:
                     {
-                        month = "Октября";
+                        month = "10";
                     }
                     break;
                 case 11:
                     {
-                        month = "Ноября";
+                        month = "11";
                     }
                     break;
                 case 12:
                     {
-                        month = "Декабря";
+                        month = "12";
                     }
                     break;
             }
@@ -137,7 +161,7 @@ namespace Tyuiu.ZhdanovaAA.Sprint2.Task5.V9.Lib
             {
                 m++;
             }
-            return day.ToString() + " " + month;
+            return days + "." + month;
         }
     }
 }
